@@ -26,7 +26,7 @@ SECRET_KEY = 'wh!xy1595_ao)y-h*o-qj@n8)3w1jnp0sk4b4s+7g0*d*fo&zh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jamieboydphotography.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get('HOSTNAME')]
 
 
 # Application definition
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'jamieboydphoto.wsgi.application'
 #     }
 # }
 
-DATABASES = {'default': dj_database_url.parse("postgres://lqgqvbkrdwdkkt:30fd14fc286b43e8c68e5c710bdd7d292601cbfeef83cb9542f379ab3cbe75a1@ec2-54-75-244-161.eu-west-1.compute.amazonaws.com:5432/d66ge8maabso72")}
+DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
