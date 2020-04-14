@@ -25,7 +25,7 @@ SECRET_KEY = 'wh!xy1595_ao)y-h*o-qj@n8)3w1jnp0sk4b4s+7g0*d*fo&zh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://jamieboydphotography.herokuapp.com/']
 
 
 # Application definition
