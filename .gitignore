@@ -4,3 +4,4 @@ venv/
 env.py
 *.pyc
 __pycache__/
+/static
