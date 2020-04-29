@@ -1,0 +1,20 @@
+
+/* Footer */
+
+.copywright-info {
+    text-align: center;
+}
+
+.socials {
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.follow-me {
+    padding-right: 2em;
+}
+
+.social-item {
+    padding-right: 2em;
+}
