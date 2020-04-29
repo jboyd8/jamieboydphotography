@@ -1,6 +1,10 @@
+/* Header */
+.options {
+    justify-content: flex-end;
+}
+
 
 /* Footer */
-
 .copywright-info {
     text-align: center;
 }
