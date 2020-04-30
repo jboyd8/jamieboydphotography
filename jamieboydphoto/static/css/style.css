@@ -1,10 +1,24 @@
+html, body {
+    height: 100%;
+}
+
 /* Header */
+.header {
+    height: 10%;
+    margin-bottom: 2em;
+}
+
 .options {
     justify-content: flex-end;
 }
 
 
 /* Footer */
+#main-footer {
+    height: 5%;
+    margin-top: 2em;
+}
+
 .copywright-info {
     text-align: center;
 }
