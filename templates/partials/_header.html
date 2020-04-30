@@ -1,12 +1,14 @@
 {% load static %}
 <!-- Navbar -->
 
-<nav class="navbar navbar-expand-lg header">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top header">
+  <!-- Website title -->
   <a class="navbar-brand {{ index }}" href="{% url 'index' %}">Jamie Boyd Photography</a>
+  <!-- Button to collapse for mobile view -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+  <!-- Link to website pages -->
   <div class="collapse navbar-collapse options" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item {{ about }}">
