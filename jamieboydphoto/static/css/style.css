@@ -106,6 +106,25 @@ section {
     border-radius: 50%;
 }
 
+/* Login */
+
+.login-body {
+    margin-top: 20%;
+}
+
+.user-card-header {
+    background-color: #121212;
+    color: #d7d9d7;
+}
+
+.user-card-body {
+    background-color: #121212;
+}
+
+.user-button {
+    background-color: #d7d9d7;
+}
+
 
 
 /* Footer */
