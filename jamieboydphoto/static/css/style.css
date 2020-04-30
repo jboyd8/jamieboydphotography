@@ -47,7 +47,7 @@ body a:hover {
 /* General */
 
 section {
-    margin-top: 15%;
+    margin-top: 10%;
     flex: 1;
 }
 
@@ -55,10 +55,15 @@ section {
 
 .index-body {
     height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #typewriter-app {
     height: 50vh;
+    display: flex;
+    align-items: center;
     text-align: center;
     font-size: 3em;
 }
