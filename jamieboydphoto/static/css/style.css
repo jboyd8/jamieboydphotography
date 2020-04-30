@@ -145,13 +145,5 @@ section {
 }
 
 .dev-icon a {
-    padding-left: 2em;
-}
-
-.follow-me {
-    padding-right: 2em;
-}
-
-.social-item {
-    padding-right: 2em;
+    padding-left: 1em;
 }
