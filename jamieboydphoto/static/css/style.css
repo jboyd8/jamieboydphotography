@@ -40,6 +40,10 @@ body a:hover {
     justify-content: flex-end;
 }
 
+.options2 {
+    justify-content: center;
+}
+
 /* General */
 
 section {
@@ -56,7 +60,13 @@ section {
 #typewriter-app {
     height: 50vh;
     text-align: center;
-    font-size: 5em;
+    font-size: 3em;
+}
+
+@media (min-width: 992px) {
+    #typewriter-app {
+        font-size: 5em;
+    }
 }
 
 /* About */
