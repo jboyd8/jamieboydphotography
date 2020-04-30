@@ -4,6 +4,15 @@ html, body {
     color: #d7d9d7;
 }
 
+body a {
+    text-decoration: none;
+    color: #d7d9d7;
+}
+
+body a:hover {
+    color: #d7d9d7;
+}
+
 /* Header */
 .header {
     height: 10%;
@@ -29,12 +38,16 @@ html, body {
 .about-image,
 .about-text {
     text-align: center;
+    padding: 3em;
 }
+
+
 
 /* Footer */
 #main-footer {
     height: 5%;
     margin-top: 2em;
+    text-align: center;
 }
 
 .copywright-info {
@@ -45,6 +58,10 @@ html, body {
     display: inline-flex;
     text-align: center;
     justify-content: center;
+}
+
+.dev-icon a {
+    padding-left: 2em;
 }
 
 .follow-me {
