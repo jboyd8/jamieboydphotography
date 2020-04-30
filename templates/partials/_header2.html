@@ -1,0 +1,39 @@
+{% load static %}
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top header">
+  <!-- Website title -->
+  <!-- Button to collapse for mobile view -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Link to website pages -->
+  <div class="collapse navbar-collapse options2" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item {{ about }}">
+        <a class="nav-link" href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blog</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Gallery
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Landscapes</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Portraits</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Cityscapes</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" >Store</a>
+      </li>
+    </ul>
+  </div>
+</nav>
