@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [os.environ.get('HOSTNAME'),
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
+    'useraccounts.apps.UseraccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
