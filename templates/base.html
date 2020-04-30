@@ -15,7 +15,11 @@
 </head>
 <body>
     <!-- Header -->
-    {% include 'partials/_header.html' %}
+    {% if '/' == request.path %}
+        {% include 'partials/_header2.html' %}
+    {% else %}
+        {% include 'partials/_header.html' %}
+    {% endif %}
 
     <!-- Main Content -->
     {% block content %}
