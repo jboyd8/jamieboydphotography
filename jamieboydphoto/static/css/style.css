@@ -53,6 +53,11 @@ section {
     height: 75%;
 }
 
+#typewriter-app {
+    height: 50vh;
+    text-align: center;
+    font-size: 5em;
+}
 
 /* About */
 
