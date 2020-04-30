@@ -43,8 +43,14 @@ body a:hover {
 /* General */
 
 section {
-    margin-top: 10%;
+    margin-top: 20%;
     flex: 1;
+}
+
+/* index */
+
+.index-body {
+    height: 75%;
 }
 
 
