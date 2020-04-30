@@ -2,7 +2,10 @@ from django.shortcuts import render
 
 
 def register(request):
-    pass
+    if request.method == 'POST':
+        pass
+    else:
+        return render(request, 'useraccounts/register.html')
 
 
 def login(request):
