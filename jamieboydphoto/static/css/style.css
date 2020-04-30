@@ -19,6 +19,10 @@ body a:hover {
     margin-bottom: 2em;
 }
 
+.active {
+    font-weight: bolder;
+}
+
 .options {
     justify-content: flex-end;
 }
