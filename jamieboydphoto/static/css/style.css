@@ -121,6 +121,10 @@ section {
     background-color: #121212;
 }
 
+.form-control {
+    margin: 2em 0;
+}
+
 .user-button {
     background-color: #d7d9d7;
 }
