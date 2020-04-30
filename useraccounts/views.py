@@ -6,7 +6,10 @@ def register(request):
 
 
 def login(request):
-    pass
+    if request.method == 'POST':
+        pass
+    else:
+        return render(request, 'useraccounts/login.html')
 
 
 def logout(request):
