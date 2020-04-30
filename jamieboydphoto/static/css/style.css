@@ -1,5 +1,7 @@
 html, body {
     height: 100%;
+    background-color: #121212;
+    color: #d7d9d7;
 }
 
 /* Header */
@@ -12,6 +14,22 @@ html, body {
     justify-content: flex-end;
 }
 
+
+
+/* About */
+
+.about-body {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.about-image,
+.about-text {
+    text-align: center;
+}
 
 /* Footer */
 #main-footer {
