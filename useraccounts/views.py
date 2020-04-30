@@ -40,4 +40,6 @@ def login(request):
 
 
 def logout(request):
-    pass
+    logout(request)
+    messages.success(request, 'You have successfully logged out')
+    return redirect('index')
