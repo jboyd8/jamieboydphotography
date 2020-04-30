@@ -41,6 +41,14 @@ body a:hover {
     padding: 3em;
 }
 
+.about-image {
+    align-self: center;
+}
+
+.about-image img {
+    border-radius: 50%;
+}
+
 
 
 /* Footer */
