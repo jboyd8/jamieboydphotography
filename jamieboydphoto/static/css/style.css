@@ -1,7 +1,20 @@
+/* html and body */
+
 html, body {
-    height: 100%;
+    height: 100vh;
     background-color: #121212;
     color: #d7d9d7;
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100vh;
 }
 
 body a {
@@ -27,6 +40,12 @@ body a:hover {
     justify-content: flex-end;
 }
 
+/* General */
+
+section {
+    margin-top: 10%;
+    flex: 1;
+}
 
 
 /* About */
@@ -35,13 +54,21 @@ body a:hover {
     height: 75%;
     display: flex;
     justify-content: center;
-    align-items: center;
     align-content: center;
+}
+
+@media (min-width: 992px){
+    .about-body {
+        padding-right: 2em;
+        padding-left: 2em;
+        font-size: 20px;
+    }
 }
 
 .about-image,
 .about-text {
     text-align: center;
+    align-self: center;
     padding: 3em;
 }
 
