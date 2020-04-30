@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %} Welcome {% endblock %}
 
 {% block content %}
-    <p>main content here</p>
+    <section class="container-fluid index-body">
+        <div class="row">
+            <div id="typewriter-app" class="col-12">
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
+    <script src="{% static 'js/typewriter.js' %}"></script>
 {% endblock %}
