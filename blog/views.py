@@ -1,3 +1,10 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def blogs(request):
+    pass
+
+
+def blog(request):
+    pass
+
