@@ -129,6 +129,17 @@ section {
     background-color: #d7d9d7;
 }
 
+/* Register */
+
+.reg-login {
+    text-align: center;
+}
+
+/* added underline so link is obvious */
+.reg-login a {
+    text-decoration: underline;
+}
+
 
 
 /* Footer */
