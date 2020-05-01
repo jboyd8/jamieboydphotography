@@ -11,9 +11,11 @@
             </div>
         </div>
     </section>
+    <!-- Flash alerts -->
     {% include 'partials/_alerts.html' %}
 {% endblock %}
 
+<!-- Links to typewriter cdn and typewriter js. Only needed on this page. -->
 {% block scripts %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
     <script src="{% static 'js/typewriter.js' %}"></script>
