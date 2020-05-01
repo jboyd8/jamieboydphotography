@@ -10,8 +10,11 @@
   <!-- Link to website pages -->
   <div class="collapse navbar-collapse options2" id="navbarSupportedContent">
     <ul class="navbar-nav">
+      <li class="nav-item {{ index }}">
+        <a class="nav-link" href="{% url 'index' %}">Home</a>
+      </li>
       <li class="nav-item {{ about }}">
-        <a class="nav-link" href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'about' %}">About</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Blog</a>
@@ -39,10 +42,10 @@
         <a class="nav-link" href="{% url 'logout' %}" >Logout</a>
       </li>
       {% else %}
-      <li class="nav-item">
+      <li class="nav-item {{ login }}">
         <a class="nav-link" href="{% url 'login' %}" >Login</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {{ register }}">
         <a class="nav-link" href="{% url 'register' %}" >Register</a>
       </li>
       {% endif %}
