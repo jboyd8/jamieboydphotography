@@ -2,23 +2,73 @@
 
 {% load static %}
 
+{% load humanize %}
+
 {% block title %}Blog Home{% endblock %}
 
 {% block content %}
 <section class="container">
     <div class="row">
-        <div class="col-12 mx-auto">
-            <div class="card">
-              <div class="card-body user-card-body">
-                <h5 class="card-title blog-title">Blog Title Here</h5>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                </p>
-                <a href="#" class="card-link">Card link</a>
-              </div>
+        {% if blog_posts %}
+            {% for blog in blog_posts %}
+                <div class="col-12 col-md-4 mx-auto">
+                    <div class="card">
+                      <div class="card-body user-card-body">
+                        <h5 class="card-title blog-title">{{ blog.blog_title }}</h5>
+                        <p class="card-text">
+                            {{ blog.date_added | timesince }}
+                        </p>
+                        <a href="{% url 'blog' blog.id %}" class="card-link">View Post</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <p>No blog posts available.</p>
             </div>
         </div>
+    {% endif %}
+
+    <div class="row">
+        <div class="col-12">
+            {% if blog_posts.has_other_pages %}
+                <ul class="pagination">
+                    {% if blog_posts.has_previous %}
+                        <li class="page-item">
+                            <a href="?page={{blog_posts.previous_page_number}}" class="page-link">&laquo;</a>
+                        </li>
+                     {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link">&laquo;</a>
+                        </li>
+                    {% endif %}
+                    {% for i in blog_posts.paginator.page_range %}
+                        {% if listings.number == i %}
+                             <li class="page-item active">
+                                <a class="page-link">{{i}}</a>
+                             </li>
+                        {% else %}
+                             <li class="page-item">
+                                <a href="?page={{i}}" class="page-link">{{i}}</a>
+                             </li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if blog_posts.has_next %}
+                        <li class="page-item">
+                            <a href="?page={{blog_posts.next_page_number}}" class="page-link">&raquo;</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link">&raquo;</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            {% endif %}
+        </div>
     </div>
+
 </section>
 {% endblock %}
