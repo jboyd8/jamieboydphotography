@@ -18,10 +18,13 @@
                     <h5>Register</h5>
                 </div>
                 <div class="card-body user-card-body">
+                    <!-- Flash alerts-->
                     {% include 'partials/_alerts.html' %}
                     <form action="{% url 'register' %}" method="POST">
+                        <!-- adds hidden field to help prevent attacks -->
                         {% csrf_token %}
                         <div class="form-group">
+                            <!-- Pass in form from the register view -->
                             {{  form }}
                         </div>
                         <input type="submit" value="Register" class="btn btn-block user-button">
