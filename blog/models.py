@@ -1,11 +1,12 @@
 from django.db import models
+from datetime import datetime
 
 genres = [
-    'Landscapes',
-    'Portraits',
-    'Cityscapes',
-    'Technical',
-    'General'
+    ('landscapes', 'Landscapes'),
+    ('landscapes', 'Portraits'),
+    ('cityscapes', 'Cityscapes'),
+    ('technical', 'Technical'),
+    ('general', 'General')
 ]
 
 
@@ -14,7 +15,7 @@ class Blogs(models.Model):
 
     blog_title = models.CharField(max_length=200)
     blog_body = models.TextField(blank=True)
-    genre = models.CharField(choices=genres)
+    genre = models.CharField(max_length=30, choices=genres)
     date_added = models.DateTimeField(default=datetime.now, blank=True)
     is_published = models.BooleanField(default=False)
 
