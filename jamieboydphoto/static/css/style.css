@@ -140,6 +140,13 @@ section {
     text-decoration: underline;
 }
 
+/* Blogs */
+
+.blog-title {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 
 
 /* Footer */
