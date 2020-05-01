@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 
 
 class LoginForm (forms.Form):
+    """Create login form. Make all form fields required. Use of widget to pass in bootstrap class for nicer form
+    and a placeholder. Ensure Labels are blank for a slicker UI."""
+
     username = forms.CharField(
         required=True,
         label='',
@@ -25,6 +28,9 @@ class LoginForm (forms.Form):
 
 
 class RegForm(UserCreationForm):
+    """Create a custom registration model (using Meta class) and form. Make all form fields required. Use of widget
+    to pass in bootstrap class for nicer form and a placeholder. Ensure Labels are blank for a slicker UI.
+    Check validation of email/username already is use and that passwords match."""
 
     first_name = forms.CharField(
         required=True,
