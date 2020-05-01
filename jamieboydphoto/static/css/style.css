@@ -142,11 +142,38 @@ section {
 
 /* Blogs */
 
-.blog-title {
+.blogs-title {
     text-decoration: underline;
     font-weight: bold;
 }
 
+/* Blog */
+
+.breadcrumb-row {
+    display: flex;
+    justify-content: center;
+}
+
+.breadcrumb {
+    background-color: #121212;
+}
+
+.breadcrumb a:hover {
+    text-decoration: none;
+}
+
+.blog-title {
+    height: 30%;
+    text-align: center;
+    align-items: center;
+    color: #d7d9d7;
+    font-size: 3em;
+}
+
+.blog-body {
+    padding: 0 15%;
+    text-align: center;
+}
 
 
 /* Footer */
