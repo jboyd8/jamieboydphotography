@@ -207,6 +207,7 @@ section {
 .breadcrumb-row {
     display: flex;
     justify-content: center;
+    margin-top: 2em;
 }
 
 .breadcrumb {
