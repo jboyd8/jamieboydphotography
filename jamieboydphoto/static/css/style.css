@@ -142,9 +142,41 @@ section {
 
 /* Blogs */
 
+.blogs-card {
+    margin: 2em 0;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .blogs-card {
+        height: 20vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .blogs-title {
+        font-size: 1.5em;
+    }
+}
+
 .blogs-title {
-    text-decoration: underline;
     font-weight: bold;
+}
+
+.page-link,
+.page-link:hover {
+    background-color: #121212;
+    color: #d7d9d7;
+    border: none;
+}
+
+.page-item.disabled .page-link {
+    background-color: #121212;
+}
+
+.pagination-col {
+    display: flex;
+    justify-content: center;
 }
 
 /* Blog */
