@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load humanize %}
+
+{% block title %}{{ post.blog_title }}{% endblock %}
+
+{% block content %}
+
+    <section class="container">
+        <!-- Breadcrumb -->
+        <div class="row">
+           <div class="col-12 breadcrumb-row">
+                 <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="{% url 'index' %}">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="{% url 'blogs' %}">Blog Home</a>
+                        </li>
+                        <li class="breadcrumb-item">{{ post.blog_title }}</li>
+                    </ol>
+                 </nav>
+           </div>
+        </div>
+        <!-- Blog Title -->
+        <div class="row blog-title">
+            <div class="col-12">
+                {{ post.blog_title }}
+            </div>
+        </div>
+        <!-- Blog Body -->
+        <div class="row blog-body">
+            <div class="col-12">
+                {{ post.blog_body }}
+            </div>
+        </div>
+
+    </section>
+{% endblock %}
