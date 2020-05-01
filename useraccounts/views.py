@@ -39,7 +39,8 @@ def login(request):
     return render(request, 'useraccounts/login.html', context)
 
 
-def logout(request):
+def logout_view(request):
     logout(request)
-    messages.success(request, 'You have successfully logged out')
+    messages.success(request, 'You have been successfully logged out')
     return redirect('index')
+
