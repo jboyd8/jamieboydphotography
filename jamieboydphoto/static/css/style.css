@@ -32,6 +32,16 @@ body a:hover {
     margin-bottom: 2em;
 }
 
+/* Added solid backgrounds to menus to be able to read properly */
+
+#navbarSupportedContent {
+    background-color: #121212;
+}
+
+.navbar-dark {
+    background-color: #121212;
+}
+
 .active {
     font-weight: bolder;
 }
@@ -141,6 +151,19 @@ section {
 }
 
 /* Blogs */
+
+.blogs-row {
+    padding: 5% 5%;
+    padding-bottom: 0;
+}
+
+/* Media query to reduce the padding on bigger screens */
+
+@media (min-width: 576px) {
+    .blogs-row {
+        padding: 2% 2%;
+    }
+}
 
 .blogs-card {
     margin: 2em 0;
