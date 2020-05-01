@@ -11,8 +11,8 @@
     <div class="row">
         {% if blog_posts %}
             {% for blog in blog_posts %}
-                <div class="col-12 col-md-4 mx-auto">
-                    <div class="card">
+                <div class="col-12 col-md-4">
+                    <div class="card blogs-card">
                       <div class="card-body user-card-body">
                         <h5 class="card-title blogs-title">{{ blog.blog_title }}</h5>
                         <p class="card-text">
@@ -22,18 +22,15 @@
                       </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
-    {% else %}
-        <div class="row">
+            {% endfor %}
+        {% else %}
             <div class="col-12 mx-auto">
                 <p>No blog posts available.</p>
             </div>
-        </div>
-    {% endif %}
-
+        {% endif %}
+    </div>
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 pagination-col">
             {% if blog_posts.has_other_pages %}
                 <ul class="pagination">
                     {% if blog_posts.has_previous %}
@@ -47,7 +44,7 @@
                     {% endif %}
                     {% for i in blog_posts.paginator.page_range %}
                         {% if listings.number == i %}
-                             <li class="page-item active">
+                             <li class="page-item">
                                 <a class="page-link">{{i}}</a>
                              </li>
                         {% else %}
