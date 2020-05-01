@@ -80,7 +80,7 @@ def login(request):
 
 def logout_view(request):
     """Logout user and redirect to the index page"""
-    
+
     logout(request)
     messages.success(request, 'You have been successfully logged out')
     return redirect('index')
