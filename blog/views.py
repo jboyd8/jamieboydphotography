@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 from .models import Blogs
 
@@ -8,7 +8,7 @@ def blogs(request):
 
     display_blogs = Blogs.objects.order_by('-date_added').filter(is_published=True)
 
-    paginator = Paginator(display_blogs, 3)
+    paginator = Paginator(display_blogs, 9)
     page = request.GET.get('page')
     paged_blogs = paginator.get_page(page)
 
@@ -20,5 +20,10 @@ def blogs(request):
 
 
 def blog(request, blog_id):
-    pass
+    post = get_object_or_404(Blogs, pk=blog_id)
 
+    context = {
+        'post': post
+    }
+
+    return render(request, 'blog/blog.html', context)
