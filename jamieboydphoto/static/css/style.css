@@ -219,11 +219,11 @@ section {
 }
 
 .blog-title {
-    height: 30%;
     text-align: center;
     align-items: center;
     color: #d7d9d7;
     font-size: 3em;
+    padding: 1em 0;
 }
 
 .blog-body {
