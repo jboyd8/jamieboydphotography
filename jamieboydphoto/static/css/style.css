@@ -87,7 +87,6 @@ section {
 /* About */
 
 .about-body {
-    height: 75%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -99,6 +98,10 @@ section {
         padding-left: 2em;
         font-size: 20px;
     }
+}
+
+.about-row {
+    justify-content: center;
 }
 
 .about-image,
