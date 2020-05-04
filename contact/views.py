@@ -5,10 +5,14 @@ import os
 from .forms import ContactForm
 from.models import Contact
 
+# Created an env var for the admin email so not in code.
 ADMINS_EMAIL = os.environ.get('ADMINS_EMAIL')
 
 
 def contact(request):
+    """Create the contact view. If the request is POST check if the user is authenticated or not and pass
+    values to the contact form based on it. An email should then be sent to the admins. If not post pass through a
+    blank version of the form."""
 
     if request.method == 'POST':
         if request.user.is_authenticated:
