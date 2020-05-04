@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load humanize %}
+
+{% block title %}Gallery{% endblock %}
+
+{% block content %}
+<section class="container">
+
+    <div class="row blogs-row">
+        {% if gallery %}
+            {% for image in gallery %}
+                <div class="col-12 mx-auto">
+                    <p>Image here.</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-12 mx-auto">
+                <p>No images available.</p>
+            </div>
+        {% endif %}
+    </div>
+
+</section>
+{% endblock %}
