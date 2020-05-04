@@ -271,6 +271,12 @@ section {
     text-align: center;
 }
 
+/* Contact */
+
+.contact-row {
+    padding: 2em 1.5em;
+}
+
 
 /* Footer */
 #main-footer {
