@@ -4,7 +4,8 @@ from .models import Blogs
 
 
 def blogs(request):
-    """FILL IN THIS COMMENT"""
+    """Create blogs view. Pick up all blog posts and display in order of most recent.
+    Add pagination to amount of posts per page."""
 
     display_blogs = Blogs.objects.order_by('-date_added').filter(is_published=True)
 
