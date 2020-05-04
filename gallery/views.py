@@ -2,5 +2,10 @@ from django.shortcuts import render
 
 
 def gallery(request):
-    pass
+
+    context = {
+        'gallery': 'active',
+    }
+
+    return render(request, 'gallery/gallery.html', context)
 
