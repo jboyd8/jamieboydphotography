@@ -9,11 +9,13 @@
 {% block content %}
 <section class="container">
 
-    <div class="row blogs-row">
+    <div class="row">
         {% if images %}
             {% for image in images %}
-                <div class="col-12 mx-auto">
-                    <p>Image here.</p>
+                <div class="col-12 col-md-4 mx-auto">
+                    <a>
+                        <img src="{{ image.image }}" class='img-fluid' Image>
+                    </a>
                 </div>
             {% endfor %}
         {% else %}
