@@ -48,9 +48,9 @@
             {% if blog_comments %}
                 {% for comment in blog_comments %}
                     <div class="col-12">
-                        {{ blog_comments.comment_body }}
-                        {{ blog_comments.date_posted }}
-                        {{ blog_comments.comment_user.username }}
+                        {{ comment.comment_body }}
+                        {{ comment.date_posted }}
+                        {{ comment.comment_user.username }}
                     </div>
                 {% endfor %}
             {% else %}
@@ -64,12 +64,13 @@
         <div class="row">
             {% if user.is_authenticated %}
                 <div class="col-12">
-                    <form action="{% url 'blog' post.id %}">
+                    <form action="{% url 'blog' post.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-group">
                             <!-- Pass through Blog Comment Form from blog view -->
                             {{ form }}
                         </div>
+                        <input type="submit" value="Submit" class="btn btn-block user-button">
                     </form>
                 </div>
             {% else %}
