@@ -40,5 +40,16 @@
             </div>
         </div>
 
+        <!-- Display Comments -->
+        <div class="row">
+            <div class="col-12">
+                {{ blog_comments.comment_body }}
+                {{ blog_comments.date_posted }}
+                {{ blog_comments.comment_user.username }}
+            </div>
+        </div>
+
+        <!-- Add Comments -->
+
     </section>
 {% endblock %}
