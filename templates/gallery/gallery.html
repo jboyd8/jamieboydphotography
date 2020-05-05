@@ -12,17 +12,14 @@
     <div class="row">
         {% if images %}
             {% for image in images %}
-                <div class="col-12 col-md-3 mx-auto">
-                    <div class="card">
-                        <img src="{{ image.image }}" class="card-img-top img-fluid" alt="">
-                        <div class="card-body">
-                            <p class="card-title">{{ image.image_title }}</p>
-                        </div>
+                <div class="col-12 col-md-4 mx-auto image-cols">
+                    <div class="card gallery-cards">
+                        <img src="{{ image.image }}" class="card-img-top img-fluid" alt="{{ image.image_description }}">
                     </div>
                 </div>
             {% endfor %}
         {% else %}
-            <div class="col-12 mx-auto">
+            <div class="col-12 m x-auto">
                 <p>No images available.</p>
             </div>
         {% endif %}
