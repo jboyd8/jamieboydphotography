@@ -64,7 +64,7 @@
         <div class="row">
             {% if user.is_authenticated %}
                 <div class="col-12">
-                    <form action="{% url 'blog' blog_id %}">
+                    <form action="{% url 'blog' post.id %}">
                         {% csrf_token %}
                         <div class="form-group">
                             <!-- Pass through Blog Comment Form from blog view -->
