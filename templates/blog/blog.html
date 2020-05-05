@@ -45,44 +45,62 @@
 
         <!-- Display Comments if available -->
         <div class="row">
+            <h5>Comments</h5>
             {% if blog_comments %}
                 {% for comment in blog_comments %}
                     <div class="col-12">
-                        {{ comment.comment_body }}
-                        {{ comment.date_posted }}
-                        {{ comment.comment_user.username }}
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Posted By: {{ comment.comment_user.username }}</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>{{ comment.comment_body }}</p>
+                                <p><small>{{ comment.date_posted }}</small></p>
+                            </div>
+                        </div>
                     </div>
                 {% endfor %}
             {% else %}
                 <div class="col-12">
-                    No comments on this blog post.
+                    <div class="card">
+                        <div class="card-body">
+                            <p>No comments on this blog post. Add a comment below to be the first.</p>
+                        </div>
+                    </div>
+
                 </div>
             {% endif %}
         </div>
 
+        <!-- Add Comments form. Should only display for logged in users. Otherwise prompt the user to logon or register-->
 
         <div class="row">
+            <h5>Add Comment</h5>
             {% if user.is_authenticated %}
                 <div class="col-12">
-                    <form action="{% url 'blog' post.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="form-group">
-                            <!-- Pass through Blog Comment Form from blog view -->
-                            {{ form }}
-                        </div>
-                        <input type="submit" value="Submit" class="btn btn-block user-button">
-                    </form>
+                    <div class="card-body">
+                        <form action="{% url 'blog' post.id %}" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <!-- Pass through Blog Comment Form from blog view -->
+                                {{ form }}
+                            </div>
+                            <input type="submit" value="Submit" class="btn btn-block user-button">
+                        </form>
+                    </div>
                 </div>
             {% else %}
                 <div class="col-12">
-                    Only registered users are able to add comments.
-                    Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'register' %}">Register</a>.
+                    <div class="card">
+                        <div class="card-body">
+                            <p>Only registered users are able to add comments.</p>
+                            <p>Please <a href="{% url 'login' %}">Login</a> or
+                                <a href="{% url 'register' %}">Register</a>.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             {% endif %}
-
-        <!-- Add Comments form. Should only display for logged in users. Otherwise prompt the user to logon or register-->
-
-
         </div>
 
     </section>
