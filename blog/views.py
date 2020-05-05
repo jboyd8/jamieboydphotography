@@ -30,15 +30,14 @@ def blog(request, blog_id):
     """
     post = get_object_or_404(Blogs, pk=blog_id)
 
-    blog_comments = get_object_or_404(BlogComment.objects.order_by('-date_posted').filter(
-        is_published=True,
-        blog_id=blog_id))
+    blog_comments = BlogComment.objects.order_by('-date_posted').filter(
+        is_published=True, related_blog=blog_id)
 
     if request.method == 'POST':
         form = BlogComment(
             comment_body=request.POST['comment_body'],
             comment_user=request.user,
-            post=post
+            related_blog=post
         )
 
         form.save()
