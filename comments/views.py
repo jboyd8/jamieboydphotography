@@ -36,7 +36,8 @@ def edit_comment(request, comment_id):
 
 def delete_comment(request, comment_id):
     """
-    Allow a user to delete their own comments.
+    Allow a user to delete their own comments and remove from the db. If its not their comment they should be thrown
+    and error message.
     """
     comment = get_object_or_404(BlogComment, pk=comment_id)
 
