@@ -44,8 +44,7 @@ def delete_comment(request, comment_id):
     if request.user == comment.comment_user:
         comment.delete()
         messages.success(request, 'You have successfully deleted your comment.')
-        redirect('blogs')
-
-    messages.error(request, 'Sorry, you cannot delete another users comment.')
-    return redirect('index')
-
+        return redirect('blogs')
+    else:
+        messages.error(request, 'Sorry, you cannot delete another users comment.')
+        return redirect('index')
