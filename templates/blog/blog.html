@@ -56,6 +56,9 @@
                             <div class="card-body">
                                 <p>{{ comment.comment_body }}</p>
                                 <p><small>{{ comment.date_posted }}</small></p>
+                                {% if request.user == comment.comment_user %}
+                                    <a href="{% url 'edit_comment' comment.id %}" class="btn">Edit</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
