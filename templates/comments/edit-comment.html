@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Edit comment{% endblock %}
+
+{% block content %}
+<section class="container login-body">
+    <div class="row contact-row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-header user-card-header">
+                    <h5>Edit Comment</h5>
+                </div>
+                <div class="card-body user-card-body">
+                    <!-- Flashes alerts -->
+                    {% include 'partials/_alerts.html' %}
+                    <form action="{% url 'edit_comment' comment.id %}" method="POST">
+                        <!-- Hidden field to help prevent attacks -->
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <!-- Pass through form from Contact view -->
+                            {{ form }}
+                        </div>
+                        <input type="submit" value="Submit" class="btn btn-block user-button">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}4
