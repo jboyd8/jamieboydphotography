@@ -41,10 +41,11 @@ def delete_comment(request, comment_id):
     """
     comment = get_object_or_404(BlogComment, pk=comment_id)
 
-    if request.user != comment.comment_user:
-        messages.error(request, 'Sorry, you cannot delete another users comment.')
-        return redirect('blogs')
-    else:
+    if request.user == comment.comment_user:
         comment.delete()
         messages.success(request, 'You have successfully deleted your comment.')
-        return redirect('blogs')
+        redirect('blogs')
+
+    messages.error(request, 'Sorry, you cannot delete another users comment.')
+    return redirect('index')
+
