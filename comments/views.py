@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from .models import BlogComment
 from .forms import BlogCommentForm
-from django.contrib import messages
 
 
 def edit_comment(request, comment_id):
