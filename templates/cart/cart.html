@@ -19,7 +19,7 @@
                     <div class="card-body">
                         <p>{{ item.product.description }}</p>
                         <img src="{{ item.product.image }}" alt="item.product.description">
-                        <p>{{ item.product.price }}</p>
+                        <p>£{{ item.product.price }}</p>
                         <p>
                             <form action="{% url 'adjust_cart' item.id %}" class="form-inline" method="POST">
                                 {% csrf_token %}
@@ -32,7 +32,7 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary" type="submit">
-                                    <span class="glyphicon glyphicon-edit" aria-hidden="true">Amend</span>
+                                    <span class="" aria-hidden="true">Amend</span>
                                 </button>
                             </form>
                         </p>
@@ -44,9 +44,9 @@
     <div class="row">
         <div class="col-12">
             <p>Total</p>
-            <p><span class="glyphicon glyphicon-pound" aria-hidden="true"></span>{{ total }}</p>
+            <p><span class="" aria-hidden="true">£</span>{{ total }}</p>
             <a href="/" class="btn btn-success" role="button">
-                <span class="glyphiconglyphicon-ok-sign" aria-hidden="true">Checkout</span>
+                <span class="" aria-hidden="true">Checkout</span>
             </a>
         </div>
     </div>
