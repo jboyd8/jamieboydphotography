@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load humanize %}
+
+{% block title %}Store{% endblock %}
+
+{% block content %}
+<section class="container">
+
+    <div class="row">
+        {% if products %}
+            {% for product in products %}
+                <div class="col-12 col-md-4 mx-auto image-cols">
+                    <div class="card gallery-cards">
+                        <div class="card-header">
+                            <h5>{{ product.name }}</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>{{ product.description }}</p>
+                            <img src="{{ product.image }}" class="card-img-top img-fluid" alt="{{ product.description }}">
+                            <p>{{ product.price }}</p>
+                            <form method="POST" action="">
+                                {% csrf_token %}
+                                <div class="input-group">
+                                    <input type="number" name="quantity" min="1" max="5" class="form-control" placeholder="Quantity">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-success" type="submit">Add</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-12 m x-auto">
+                <p>No images available.</p>
+            </div>
+        {% endif %}
+    </div>
+
+</section>
+{% endblock %}
