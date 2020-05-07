@@ -1,3 +1,14 @@
 from django.shortcuts import render
+from .models import Product
 
-# Create your views here.
+
+def store(request):
+
+    products = Product.objects.filter(is_published=True)
+
+    context = {
+        'store': 'active',
+        'products': products
+    }
+
+    return render(request, 'store/store.html', context)
