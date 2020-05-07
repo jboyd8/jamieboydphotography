@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'gallery.apps.GalleryConfig',
     'comments.apps.CommentsConfig',
     'store.apps.StoreConfig',
+    'cart.apps.CartConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
