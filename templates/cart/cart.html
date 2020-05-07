@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load humanize %}
+
+{% block title %}Cart{% endblock %}
+
+{% block content %}
+<section class="container">
+
+    <div class="row">
+        <div class="col-12">
+            {% for item in cart_items %}
+                <div class="card">
+                    <div class="card-header">
+                        <h5>{{ item.product.name }}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>{{ item.product.description }}</p>
+                        <img src="{{ item.product.image }}" alt="item.product.description">
+                        <p>{{ item.product.price }}</p>
+                        <p>
+                            <form action="{% url 'adjust_cart' item.id %}" class="form-inline" method="POST">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Qty</div>
+                                        <input type="number" class="form-control" name="quantity" min="0" max="5">
+                                        <div class="input-group-addon">{{ item.quantity }}</div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" type="submit">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true">Amend</span>
+                                </button>
+                            </form>
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>Total</p>
+            <p><span class="glyphicon glyphicon-pound" aria-hidden="true"></span>{{ total }}</p>
+            <a href="/" class="btn btn-success" role="button">
+                <span class="glyphiconglyphicon-ok-sign" aria-hidden="true">Checkout</span>
+            </a>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
