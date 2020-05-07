@@ -24,7 +24,7 @@
                         <div class="card-body">
                             <p>{{ product.description }}</p>
                             <img src="{{ product.image }}" class="card-img-top img-fluid" alt="{{ product.description }}">
-                            <p>{{ product.price }}</p>
+                            <p>£{{ product.price }}</p>
                             <form method="POST" action="{% url 'add_to_cart' product.id %}">
                                 {% csrf_token %}
                                 <div class="input-group">
