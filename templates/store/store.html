@@ -10,6 +10,10 @@
 <section class="container">
 
     <div class="row">
+        <div class="col-12">
+            <!-- Flashes alerts -->
+            {% include 'partials/_alerts.html' %}
+        </div>
         {% if products %}
             {% for product in products %}
                 <div class="col-12 col-md-4 mx-auto image-cols">
