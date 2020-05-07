@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
 
 
 def view_cart(request):
@@ -13,15 +14,19 @@ def add_to_cart(request, id):
      Adds the amount of a selected product to the cart
     """
     quantity = int(request.POST['quantity'])
-
     cart = request.session.get('cart', {})
-    cart[id] = cart.get(id, quantity)
+
+    if id in cart:
+        cart[id] = int(cart[id] + quantity)
+    else:
+        cart[id] = cart.get(id, quantity)
 
     request.session['cart'] = cart
-    return redirect(reverse('index'))
+    messages.success(request, 'You have successfully added an item to your cart.')
+    return redirect(reverse('store'))
 
 
-def adjust_cart(request):
+def adjust_cart(request, id):
     """
     Adjust the quantity of a specified product
     """
