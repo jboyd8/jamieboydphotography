@@ -23,23 +23,17 @@
         </div>
         {% if products %}
             {% for product in products %}
-                <div class="col-12 col-md-4 mx-auto image-cols">
-                    <div class="card gallery-cards">
-                        <div class="card-header">
-                            <h5>{{ product.name }}</h5>
-                        </div>
+                <div class="col-12 col-md-6 col-lg-4 mx-auto image-cols">
+                    <div class="card store-cards">
                         <div class="card-body">
-                            <p>{{ product.description }}</p>
                             <img src="{{ product.image }}" class="card-img-top img-fluid" alt="{{ product.description }}">
-                            <p>£{{ product.price }}</p>
-                            <form method="POST" action="{% url 'add_to_cart' product.id %}">
+                            <p class="store-price">£{{ product.price }}</p>
+                            <form class="form-group" method="POST" action="{% url 'add_to_cart' product.id %}">
                                 {% csrf_token %}
-                                <div class="input-group">
-                                    <input type="number" name="quantity" min="1" max="5" class="form-control" placeholder="Quantity">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-success" type="submit">Add</button>
-                                    </span>
-                                </div>
+                                <input type="number" name="quantity" min="1" max="5"
+                                       class="form-control store-form-item" placeholder="Quantity">
+                                <button class="btn btn-form-control store-form-item atc-btn"
+                                        type="submit">Add To Cart</button>
                             </form>
                         </div>
 

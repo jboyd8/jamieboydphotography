@@ -299,6 +299,25 @@ section {
     }
 }
 
+.store-cards {
+    background-color: #121212;
+    color: #d7d9d7;
+    text-align: center;
+    border: #d7d9d7 1px solid;
+}
+
+.store-form-item {
+    margin: 0.5em 0;
+}
+
+.store-price {
+    margin-top: 1rem;
+}
+
+.atc-btn {
+    background-color: #d7d9d7;
+    color: #121212;
+}
 
 /* Footer */
 #main-footer {
