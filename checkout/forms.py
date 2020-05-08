@@ -8,6 +8,8 @@ class MakePaymentForm(forms.Form):
     YEAR_CHOICES = [(i, i) for i in range(2020, 2036)]
 
     credit_card_number = forms.CharField(
+        min_length=16,
+        max_length=16,
         required=False,
         label="",
         widget=forms.TextInput(attrs={
@@ -21,7 +23,8 @@ class MakePaymentForm(forms.Form):
         label="",
         widget=forms.NumberInput(attrs={
             'class': 'form-control',
-            'placeholder': 'CVV'
+            'placeholder': 'CVV',
+            'required': 'True',
         })
     )
 
