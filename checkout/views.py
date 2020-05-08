@@ -20,6 +20,7 @@ def checkout(request):
         if order_form.is_valid() and payment_form.is_valid():
             order = order_form.save(commit=False)
             order.date = timezone.now()
+            order.user = request.user
             order.save()
 
             cart = request.session.get('cart', {})
@@ -38,14 +39,14 @@ def checkout(request):
                 customer = stripe.Charge.create(
                     amount=int(total*100),
                     currency="GBP",
-                    description = request.user.email,
+                    description=request.user.email,
                     card=payment_form.cleaned_data['stripe_id']
                 )
             except stripe.error.CardError:
                 messages.error(request, "Your card was declined")
 
             if customer.paid:
-                messages.error(request, 'You have successfully paid')
+                messages.success(request, 'You have successfully paid')
                 request.session['cart'] = {}
                 return redirect(reverse('store'))
             else:
@@ -62,4 +63,4 @@ def checkout(request):
             'payment_form': payment_form,
             'publishable': settings.STRIPE_PUBLISHABLE
         }
-        return render(request, 'checkout/checkout.html')
+        return render(request, 'checkout/checkout.html', context)
