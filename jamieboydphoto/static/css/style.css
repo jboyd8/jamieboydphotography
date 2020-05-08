@@ -287,6 +287,18 @@ section {
     border: none;
 }
 
+/* Store */
+.store-intro {
+    padding: 20% 10% 5%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .store-intro {
+        padding-top: 5%;
+    }
+}
+
 
 /* Footer */
 #main-footer {
