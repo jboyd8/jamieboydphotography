@@ -6,7 +6,11 @@ def view_cart(request):
     """
      Renders the cart contents page.
     """
-    return render(request, 'cart/cart.html')
+
+    context = {
+        'cart': 'active'
+    }
+    return render(request, 'cart/cart.html', context)
 
 
 def add_to_cart(request, id):
