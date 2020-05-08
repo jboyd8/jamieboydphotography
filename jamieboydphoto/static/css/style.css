@@ -325,6 +325,28 @@ section {
     text-align: center;
 }
 
+/* Checkout */
+
+.checkout-total-row {
+    justify-content: center;
+}
+
+.checkout-col {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+}
+
+@media (min-width: 768px) {
+    .checkout-col {
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+}
+
+.checkout-card {
+    text-align: center;
+}
+
 /* Footer */
 #main-footer {
     height: 5%;
