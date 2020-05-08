@@ -152,6 +152,12 @@ section {
     margin-top: 20%;
 }
 
+@media (min-width: 992px) {
+    .login-body {
+        margin-top: 10%;
+    }
+}
+
 .user-card-header {
     background-color: #121212;
     color: #d7d9d7;
