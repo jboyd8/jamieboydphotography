@@ -8,46 +8,38 @@
 
 {% block content %}
 <section class="container">
-
-    <div class="row">
-        <div class="col-12">
-            {% for item in cart_items %}
-                <div class="card">
-                    <div class="card-header">
-                        <h5>{{ item.product.name }}</h5>
-                    </div>
-                    <div class="card-body">
-                        <p>{{ item.product.description }}</p>
-                        <img src="{{ item.product.image }}" alt="item.product.description">
-                        <p>£{{ item.product.price }}</p>
-                        <p>
-                            <form action="{% url 'adjust_cart' item.id %}" class="form-inline" method="POST">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">Qty</div>
-                                        <input type="number" class="form-control" name="quantity" min="0" max="5">
-                                        <div class="input-group-addon">{{ item.quantity }}</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary" type="submit">
-                                    <span class="" aria-hidden="true">Amend</span>
-                                </button>
-                            </form>
-                        </p>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="row">
+    <!-- Total and checkout button -->
+    <div class="row cart-row">
         <div class="col-12">
             <p>Total</p>
             <p><span class="" aria-hidden="true">£</span>{{ total }}</p>
-            <a href="{% url 'checkout' %}" class="btn btn-success" role="button">
+            <a href="{% url 'checkout' %}" class="btn atc-btn" role="button">
                 <span class="" aria-hidden="true">Checkout</span>
             </a>
+        </div>
+    </div>
+
+    <!-- Cart items -->
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mx-auto image-cols">
+            {% for item in cart_items %}
+                <div class="card">
+                    <div class="card-body store-cards">
+                        <img src="{{ item.product.image }}" class="card-img-top img-fluid" alt="item.product.description">
+                        <p class="store-price">£{{ item.product.price }}</p>
+                        <form action="{% url 'adjust_cart' item.id %}" class="form-group" method="POST">
+                            {% csrf_token %}
+                            <div class="form-control">Quantity Selected : {{ item.quantity }}</div>
+                            <div class="form-group">
+                                <input type="number" class="form-control store-form-item" name="quantity" min="0" max="5"
+                                       placeholder="Amend Quantity">
+                                <button class="btn form-control store-form-item atc-btn"
+                                        type="submit">Amend Quantity</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 

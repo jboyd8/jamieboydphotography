@@ -319,6 +319,12 @@ section {
     color: #121212;
 }
 
+/* Cart */
+
+.cart-row {
+    text-align: center;
+}
+
 /* Footer */
 #main-footer {
     height: 5%;
