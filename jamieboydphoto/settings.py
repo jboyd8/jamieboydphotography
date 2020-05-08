@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'comments.apps.CommentsConfig',
     'store.apps.StoreConfig',
     'cart.apps.CartConfig',
+    'checkout.apps.CheckoutConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
