@@ -29,7 +29,7 @@
                         <p class="store-price">£{{ item.product.price }}</p>
                         <form action="{% url 'adjust_cart' item.id %}" class="form-group" method="POST">
                             {% csrf_token %}
-                            <div class="form-control">Quantity Selected : {{ item.quantity }}</div>
+                            <div class="form-control cart-quantity">Quantity Selected : {{ item.quantity }}</div>
                             <div class="form-group">
                                 <input type="number" class="form-control store-form-item" name="quantity" min="0" max="5"
                                        placeholder="Amend Quantity">

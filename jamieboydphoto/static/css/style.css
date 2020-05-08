@@ -331,6 +331,18 @@ section {
     text-align: center;
 }
 
+.badge {
+    background-color: #d7d9d7;
+    color: #121212;
+}
+
+.cart-quantity {
+    background-color: #121212;
+    color: #d7d9d7;
+    border: none;
+    margin: 0.5em 0;
+}
+
 /* Checkout */
 
 .checkout-total-row {
