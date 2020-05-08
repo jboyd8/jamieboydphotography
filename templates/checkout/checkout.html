@@ -43,11 +43,11 @@
                         </div>
                         <!-- Hidden field to help prevent attacks -->
                         {% csrf_token %}
-                        <div class="form-group col-12">
+                        <div class="form-group col-12 col-md-6">
                             <!-- Pass through payment form from Checkout view -->
                             {{ payment_form }}
                         </div>
-                        <div class="form-group col-12">
+                        <div class="form-group col-12 col-md-6">
                             <!-- Pass through order form from checkout view -->
                             {{ order_form }}
                         </div>
