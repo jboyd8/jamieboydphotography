@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import dj_database_url
+from django.contrib.messages import constants as messages
 
 if os.path.exists('env.py'):
     import env
@@ -147,7 +148,6 @@ STATICFILES_DIRS = [
 
 # Import messages
 
-from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
@@ -160,3 +160,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = os.environ.get('SITE_EMAIL')
 EMAIL_HOST_PASSWORD = os.environ.get('SITE_EMAIL_PASSWORD')
 EMAIL_USE_TLS = True
+
+# Stripe Keys
+STRIPE_PUBLISHABLE = os.environ.get('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = os.environ.get('STRIPE_SECRET')
