@@ -51,6 +51,7 @@ Below is a list of technologies I used to build my dashboard.
 * [Django]() - Python framework used in order to build out the routes/views of my website.
 * [PostGres]() - 
 * [typewriter.js]() - 
+* [Stripe]() - 
 
 
 ## Testing
@@ -78,6 +79,10 @@ to find a solution to fix this.
 
 Footer appearing over about content and blog. About not showing in dev tools so hard to fix
 
+str url field for adjust cart
+
+cvv field - cannot get the max length to work
+
 ## Deployment
 ---
 My website was created using VSCode. VSCode is a text editor with a built in terminal. I chose to use a text editor/IDE 
@@ -103,7 +108,7 @@ field provided.
 * Every time I push to GitHub it will automatically send the updates across to Heroku.
 * I then also had to create some Config Vars in the settings tab, to reflect the environment variables created 
 in the .flaskenv file that is in .gitignore.
-* [Website Link](https://jb-milestone-project-3.herokuapp.com/)
+* [Website Link](https://jamieboydphotography.herokuapp.com/)
 
 ### To run this project locally
 
