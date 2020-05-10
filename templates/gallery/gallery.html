@@ -16,10 +16,11 @@
     <div class="row">
         {% if images %}
             {% for image in images %}
-                <div class="col-12 col-md-4 mx-auto image-cols">
+                <div class="col-12 col-lg-4 mx-auto image-cols">
                     <div class="card gallery-cards">
                         <a data-lightbox='gallery' href='{{ image.image }}'>
-                            <img src="{{ image.image }}" class="card-img-top img-fluid" alt="{{ image.image_description }}">
+                            <img src="{{ image.image }}" class="card-img-top img-fluid gallery-images"
+                            alt="{{ image.image_description }}">
                         </a>
                     </div>
                 </div>
