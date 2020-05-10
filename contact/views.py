@@ -45,9 +45,17 @@ def contact(request):
 
         messages.success(request, 'Your enquiry has been submitted, I will get back to you shortly.')
 
-    context = {
-        'contact': 'active',
-        'form': ContactForm
-    }
+    else:
+        if request.user.is_authenticated:
+            form = ContactForm(
+                initial={'email': request.user.email}
+            )
+        else:
+            form = ContactForm()
+
+        context = {
+            'contact': 'active',
+            'form': form
+        }
 
     return render(request, 'contact/contact.html', context)
