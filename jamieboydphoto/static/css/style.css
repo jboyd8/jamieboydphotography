@@ -296,7 +296,7 @@ section {
 /* Added media query to bring structure to page on bigger screens */
 @media (min-width: 992px) {
     .gallery-images {
-        height: 40vh;
+        height: 30vh;
     }
 }
 
