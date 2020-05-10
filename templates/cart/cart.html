@@ -13,9 +13,14 @@
         <div class="col-12">
             <p>Total</p>
             <p><span class="" aria-hidden="true">£</span>{{ total }}</p>
-            <a href="{% url 'checkout' %}" class="btn atc-btn" role="button">
-                <span class="" aria-hidden="true">Checkout</span>
-            </a>
+            {% if total > 0 %}
+                <a href="{% url 'checkout' %}" class="btn atc-btn" role="button">
+                    <span class="" aria-hidden="true">Checkout</span>
+                </a>
+            {% else %}
+                <p>Your cart is now empty. Return to <a href="{% url 'store' %}">store</a></p>
+            {% endif %}
+
         </div>
     </div>
 
