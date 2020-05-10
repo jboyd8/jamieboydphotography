@@ -293,6 +293,13 @@ section {
     border: none;
 }
 
+/* Added media query to bring structure to page on bigger screens */
+@media (min-width: 992px) {
+    .gallery-images {
+        height: 40vh;
+    }
+}
+
 /* Store */
 .store-intro {
     padding: 20% 10% 5%;
