@@ -44,6 +44,7 @@ def contact(request):
         )
 
         messages.success(request, 'Your enquiry has been submitted, I will get back to you shortly.')
+        return redirect('index')
 
     else:
         if request.user.is_authenticated:
@@ -53,9 +54,9 @@ def contact(request):
         else:
             form = ContactForm()
 
-        context = {
-            'contact': 'active',
-            'form': form
-        }
+    context = {
+        'contact': 'active',
+        'form': form
+    }
 
     return render(request, 'contact/contact.html', context)
