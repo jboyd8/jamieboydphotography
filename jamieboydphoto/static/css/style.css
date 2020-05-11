@@ -323,6 +323,12 @@ section {
     margin: 0.5em 0;
 }
 
+@media (min-width: 768px) {
+    .store-img {
+        height: 30vh;
+    }
+}
+
 .store-price {
     margin-top: 1rem;
 }
@@ -348,6 +354,10 @@ section {
     color: #d7d9d7;
     border: none;
     margin: 0.5em 0;
+}
+
+.cart-cards {
+    margin-bottom: 1em;
 }
 
 /* Checkout */
