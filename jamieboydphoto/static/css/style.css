@@ -221,7 +221,7 @@ section {
 }
 
 .blogs-card-body {
-    box-shadow: 1em 1em 0.5em #d7d9d7;
+    box-shadow: 0.5em 0.5em 0.5em #d7d9d7;
 }
 
 .page-link,
