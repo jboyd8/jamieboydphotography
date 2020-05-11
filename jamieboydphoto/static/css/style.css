@@ -207,6 +207,7 @@ section {
 .blogs-card {
     margin: 2em 0;
     text-align: center;
+    border: 2px solid #d7d9d7;
 }
 
 @media (min-width: 992px) {
@@ -217,6 +218,10 @@ section {
 
 .blogs-title {
     font-weight: bold;
+}
+
+.blogs-card-body {
+    box-shadow: 1em 1em 0.5em #d7d9d7;
 }
 
 .page-link,
