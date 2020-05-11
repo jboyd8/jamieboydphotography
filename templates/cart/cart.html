@@ -28,7 +28,7 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 mx-auto image-cols">
             {% for item in cart_items %}
-                <div class="card">
+                <div class="card cart-cards">
                     <div class="card-body store-cards">
                         <img src="{{ item.product.image }}" class="card-img-top img-fluid" alt="item.product.description">
                         <p class="store-price">£{{ item.product.price }}</p>
