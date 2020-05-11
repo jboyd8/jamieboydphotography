@@ -289,6 +289,14 @@ section {
     border: #d7d9d7 solid 1px;
 }
 
+.no-com-col {
+    text-align: center;
+}
+
+.no-comments {
+    border: none;
+}
+
 .add-cmt-form {
     text-align: center;
 }
@@ -317,7 +325,7 @@ section {
 /* Added media query to bring structure to page on bigger screens */
 @media (min-width: 992px) {
     .gallery-images {
-        height: 30vh;
+        height: 25vh;
     }
 }
 
