@@ -274,6 +274,25 @@ section {
     text-align: center;
 }
 
+.comment-rows {
+    margin-top: 2em;
+    justify-content: center;
+}
+
+.comment-title {
+    padding-bottom: 2em;
+}
+
+.comment-card {
+    margin-bottom: 1em;
+    background-color: #121212;
+    border: #d7d9d7 solid 1px;
+}
+
+.add-cmt-form {
+    text-align: center;
+}
+
 /* Contact */
 
 .contact-row {

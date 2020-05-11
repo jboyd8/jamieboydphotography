@@ -44,12 +44,12 @@
         {% include 'partials/_alerts.html' %}
 
         <!-- Display Comments if available -->
-        <div class="row">
-            <h5>Comments</h5>
+        <div class="row comment-rows">
+            <h5 class="comment-title">Comments</h5>
             {% if blog_comments %}
                 {% for comment in blog_comments %}
                     <div class="col-12">
-                        <div class="card">
+                        <div class="card comment-card">
                             <div class="card-header">
                                 <h5>Posted By: {{ comment.comment_user.username }}</h5>
                             </div>
@@ -57,7 +57,8 @@
                                 <p>{{ comment.comment_body }}</p>
                                 <p><small>{{ comment.date_posted }}</small></p>
                                 {% if request.user == comment.comment_user %}
-                                    <a href="{% url 'edit_comment' comment.id %}" class="btn">Edit</a>
+                                    <a href="{% url 'edit_comment' comment.id %}"
+                                       class="btn coloured-links">Edit Comment</a>
                                 {% endif %}
                             </div>
                         </div>
@@ -77,18 +78,18 @@
 
         <!-- Add Comments form. Should only display for logged in users. Otherwise prompt the user to logon or register-->
 
-        <div class="row">
+        <div class="row comment-rows">
             <h5>Add Comment</h5>
             {% if user.is_authenticated %}
                 <div class="col-12">
                     <div class="card-body">
-                        <form action="{% url 'blog' post.id %}" method="POST">
+                        <form class="add-cmt-form" action="{% url 'blog' post.id %}" method="POST">
                             {% csrf_token %}
                             <div class="form-group">
                                 <!-- Pass through Blog Comment Form from blog view -->
                                 {{ form }}
                             </div>
-                            <input type="submit" value="Submit" class="btn btn-block user-button">
+                            <input type="submit" value="Submit" class="btn user-button">
                         </form>
                     </div>
                 </div>
