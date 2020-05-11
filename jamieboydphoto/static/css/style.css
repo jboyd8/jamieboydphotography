@@ -67,6 +67,14 @@ section {
             flex: 1;
 }
 
+.coloured-links {
+    color: #993300;
+}
+
+.coloured-links:hover {
+    text-decoration: none;
+}
+
 /* index */
 
 .index-body {
@@ -181,11 +189,6 @@ section {
     text-align: center;
 }
 
-/* added underline so link is obvious */
-.reg-login a {
-    text-decoration: underline;
-}
-
 /* Blogs */
 
 .blogs-row {
@@ -204,12 +207,6 @@ section {
 .blogs-card {
     margin: 2em 0;
     text-align: center;
-}
-
-@media (min-width: 992px) {
-    .blogs-card {
-        height: 20vh;
-    }
 }
 
 @media (min-width: 992px) {
