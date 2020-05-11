@@ -314,6 +314,10 @@ section {
 
 /* Gallery */
 
+.gallery-text {
+    text-align: center;
+}
+
 .image-cols {
     padding: 1.5em;
 }
