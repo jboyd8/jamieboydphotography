@@ -293,10 +293,15 @@ section {
     text-align: center;
 }
 
+.del-com-btn {
+    margin-top: 1em;
+}
+
 /* Contact */
 
 .contact-row {
     padding: 2em 1.5em;
+    text-align: center;
 }
 
 /* Gallery */
@@ -341,7 +346,7 @@ section {
 
 @media (min-width: 768px) {
     .store-img {
-        height: 30vh;
+        height: 25vh;
     }
 }
 
