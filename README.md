@@ -107,18 +107,25 @@ feature in the css styles, and just used bootstrap cards to created a layout. Ho
 
 ###Index
 ![Index](jamieboydphoto/static/wireframes/Index.jpg)
+
 ###About
 ![About](jamieboydphoto/static/wireframes/About.jpg)
+
 ###Gallery
 ![Gallery](jamieboydphoto/static/wireframes/Gallery.jpg)
+
 ###Blog Main Page
 ![BlogMain](jamieboydphoto/static/wireframes/Blog%20main.jpg)
+
 ###Individual Blog Pages
 ![BlogIndividuals](jamieboydphoto/static/wireframes/Blog%20individual.jpg)
+
 ###Forms
 ![Forms](jamieboydphoto/static/wireframes/Forms.jpg)
+
 ###Store
 ![Store](jamieboydphoto/static/wireframes/Store.jpg)
+
 ###Cart
 ![Cart](jamieboydphoto/static/wireframes/Cart.jpg)
 
