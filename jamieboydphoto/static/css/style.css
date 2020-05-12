@@ -323,6 +323,13 @@ section {
 
 .gallery-text {
     text-align: center;
+    padding-top: 15%;
+}
+
+@media (min-width: 992px) {
+    .gallery-text {
+        padding-top: 5%;
+    }
 }
 
 .image-cols {
