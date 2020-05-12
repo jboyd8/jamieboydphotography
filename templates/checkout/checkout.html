@@ -7,11 +7,14 @@
 {% block content %}
 <section class="container login-body">
     <div class="row checkout-total-row">
+        <!-- Pass in the total to show how much paying -->
         <div>
             <h2>Total: £{{ total }}</h2>
         </div>
 
     </div>
+
+    <!-- Pass in both forms within the same form tag so they are submitted together. -->
     <div class="row contact-row">
         <div class="col-12 mx-auto checkout-col">
             <div class="card checkout-card">
@@ -22,19 +25,28 @@
                     <!-- Flashes alerts -->
                     {% include 'partials/_alerts.html' %}
                     <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-                        <legend>Please enter payment details below</legend>
-                        <div id="credit-card-errors" style="display: none">
-                            <div class="alert-message block-message error" id="stripe-error-message"></div>
-                        </div>
                         <!-- Hidden field to help prevent attacks -->
                         {% csrf_token %}
+                        <!-- Pass through payment form from Checkout view -->
                         <div class="form-group">
-                            <!-- Pass through payment form from Checkout view -->
-                            {{ payment_form }}
+                            <div class="card checkout-card">
+                                <div class="card-body user-card-body">
+                                    <legend>Please enter payment details below</legend>
+                                    <div id="credit-card-errors" style="display: none">
+                                        <div class="alert-message block-message error" id="stripe-error-message"></div>
+                                    </div>
+                                    {{ payment_form }}
+                                </div>
+                            </div>
                         </div>
+                        <!-- Pass through order form from checkout view -->
                         <div class="form-group">
-                            <!-- Pass through order form from checkout view -->
-                            {{ order_form }}
+                            <div class="card checkout-card">
+                                <div class="card-body user-card-body">
+                                    <legend>Shipping/Billing Details</legend>
+                                    {{ order_form }}
+                                </div>
+                            </div>
                         </div>
                         <input type="submit" name="commit" value="Submit Payment"
                                class="btn btn-block user-button" id="submit_payment_btn">
