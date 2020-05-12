@@ -3,6 +3,9 @@ from .models import BlogComment
 
 
 class BlogCommentForm(forms.ModelForm):
+    """
+    Create form for a single comment
+    """
     class Meta:
         model = BlogComment
         fields = ['comment_body']
