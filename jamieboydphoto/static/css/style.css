@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
@@ -227,7 +234,8 @@ section {
 }
 
 .blogs-card-body {
-    box-shadow: 0.5em 0.5em 0.5em #d7d9d7;
+    -webkit-box-shadow: 0.5em 0.5em 0.5em #d7d9d7;
+            box-shadow: 0.5em 0.5em 0.5em #d7d9d7;
 }
 
 .page-link,
@@ -287,7 +295,9 @@ section {
 
 .comment-rows {
     margin-top: 2em;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .comment-title {
@@ -416,7 +426,9 @@ section {
 /* Checkout */
 
 .checkout-total-row {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .checkout-col {
@@ -466,3 +478,4 @@ section {
 .dev-icon a {
     padding-left: 1em;
 }
+
