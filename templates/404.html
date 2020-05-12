@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load humanize %}
+
+{% block title %}404 Page Not Found Error{% endblock %}
+
+{% block content %}
+<section class="container">
+    <div class="row error-rows">
+        <div class="col-12">
+            <h2>404 Error</h2>
+        </div>
+    </div>
+    <div class="row error-rows">
+        <div class="col-12">
+            <p>It looks like the page your are trying to access doesn't exist or is unavailable.</p>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

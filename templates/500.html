@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load humanize %}
+
+{% block title %}500 Internal Server Error{% endblock %}
+
+{% block content %}
+<section class="container">
+    <div class="row error-rows">
+        <div class="col-12">
+            <h2>500 Error</h2>
+        </div>
+    </div>
+    <div class="row error-rows">
+        <div class="col-12">
+            <p>Hmm, it looks like our website is currently down. Please come back later!</p>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
