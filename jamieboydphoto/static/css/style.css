@@ -123,49 +123,78 @@ section {
 
 /* About */
 
-.about-body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-}
+/*.about-body {*/
+/*    display: -webkit-box;*/
+/*    display: -ms-flexbox;*/
+/*    display: flex;*/
+/*    -webkit-box-pack: center;*/
+/*        -ms-flex-pack: center;*/
+/*            justify-content: center;*/
+/*    -ms-flex-line-pack: center;*/
+/*        align-content: center;*/
+/*}*/
 
-@media (min-width: 992px){
-    .about-body {
-        padding-right: 2em;
-        padding-left: 2em;
-        font-size: 20px;
-    }
+/*@media (min-width: 992px){*/
+/*    .about-body {*/
+/*        padding-right: 2em;*/
+/*        padding-left: 2em;*/
+/*        font-size: 20px;*/
+/*    }*/
+/*}*/
+
+/*.about-row {*/
+/*    -webkit-box-pack: center;*/
+/*        -ms-flex-pack: center;*/
+/*            justify-content: center;*/
+/*}*/
+
+/*.about-image,*/
+/*.about-text {*/
+/*    text-align: center;*/
+/*    -ms-flex-item-align: center;*/
+/*        -ms-grid-row-align: center;*/
+/*        align-self: center;*/
+/*    padding: 3em;*/
+/*}*/
+
+/*.about-image {*/
+/*    -ms-flex-item-align: center;*/
+/*        -ms-grid-row-align: center;*/
+/*        align-self: center;*/
+/*}*/
+
+.about-body {
+    display: flex;
+    justify-content: center;
 }
 
 .about-row {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 15%;
 }
 
-.about-image,
-.about-text {
-    text-align: center;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    padding: 3em;
+@media (min-width: 992px) {
+    .about-row {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
 }
 
 .about-image {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    padding-bottom: 10%;
 }
 
 .about-image img {
     border-radius: 50%;
 }
+
+@media (min-width: ) {
+    
+}
+
+
 
 /* Login */
 
