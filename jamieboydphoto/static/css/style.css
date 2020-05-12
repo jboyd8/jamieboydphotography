@@ -1,9 +1,13 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
 /* html and body */
 
 html, body {
     height: 100vh;
     background-color: #121212;
     color: #d7d9d7;
+    font-family: 'Arimo', sans-serif;
 }
 
 body {
@@ -30,6 +34,7 @@ body a:hover {
 .header {
     height: 10%;
     margin-bottom: 2em;
+    font-size: 1.1em;
 }
 
 /* Added solid backgrounds to menus to be able to read properly */
@@ -61,6 +66,7 @@ body a:hover {
 /* General */
 
 section {
+    font-size: 1.1em;
     margin-top: 10%;
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -68,7 +74,7 @@ section {
 }
 
 .coloured-links {
-    color: #993300;
+    color: #12de4c;
 }
 
 .coloured-links:hover {
