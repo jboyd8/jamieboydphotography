@@ -12,6 +12,27 @@ Javascript, HTML and CSS skills we have previously learnt.
 
 [Jamie Boyd Photography](https://jamieboydphotography.herokuapp.com/)
 
+##Development
+---
+To develop this project i decided to use Django 3. Although the course was taught using Django 1 I wanted to try and get 
+myself familiar with the newest tech, especially given it is only a couple of months old (at the time of writing). This 
+created some learning curves where things were done slightly differently, namely the urls. One of the huge benefits of 
+Django is that it takes care of a lot of things under the hood which lends itself to fast deployment. Another benefit is 
+that you create different sections of your site in individual 'apps' with he premise that you can re-use the 
+functionality on future sites.
+
+Throughout development I used Git and GitHub for version control. Firstly, I made sure my site was deployed correctly 
+based on the master branch in GitHub. Once setup was successful, I started to develop on different branches. This 
+allowed me to test rigorously on a separate branch and only move onto the master branch once I was happy everything 
+was working as it should be.
+
+PyCharm was my choice of IDE this time around. I like its debugging features and it works really well with Django.
+
+Additionally, I chose to use Postgres as my database as this is more scalable as your app grows.
+
+The app is deployed on Heroku, and all environment variables are stored locally in an env.py file. This was added to 
+a .gitignore file so all of the values were kept a secret.
+
 ###Note
 When testing this project, to make a payment via the store, the below details should be used:
 * Card Number: 4242424242424242
@@ -76,16 +97,30 @@ feature in the css styles, and just used bootstrap cards to created a layout. Ho
  
  For the flashed messages, I didnt like how it looked when it stayed on the page and interrupted the design. 
  To combat this I created some custom JS to remove the messages from the screen after 3 seconds.
+ 
+ In terms of the font, I chose 'Arimo' because I wanted to use a font that wasn't super formal. This is a photography 
+ site after all which is all about creativity. However, it is my personal opinion that its a very fine line with fonts 
+ before they start looking gimmicky. 
 
 
 ###Wireframes
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+###Index
+![Index](jamieboydphoto/static/wireframes/Index.jpg)
+###About
+![About](jamieboydphoto/static/wireframes/About.jpg)
+###Gallery
+![Gallery](jamieboydphoto/static/wireframes/Gallery.jpg)
+###Blog Main Page
+![BlogMain](jamieboydphoto/static/wireframes/Blog%20main.jpg)
+###Individual Blog Pages
+![BlogIndividuals](jamieboydphoto/static/wireframes/Blog%20individual.jpg)
+###Forms
+![Forms](jamieboydphoto/static/wireframes/Forms.jpg)
+###Store
+![Store](jamieboydphoto/static/wireframes/Store.jpg)
+###Cart
+![Cart](jamieboydphoto/static/wireframes/Cart.jpg)
 
 
 ##Features
@@ -139,11 +174,11 @@ the the first time. They were carefully thought out to ensure everything I could
 take accessibility into consideration on my site, so I added an image description on the gallery and the store 
 to enable me to pass it into the alt property on my images. I chose to use URL fields for the images due to me already 
 having the images hosted on another platform, and this then enabled to upload once and grab from there.
-* To add the models into the application, after completing the detail, I would make migrations by runnnin 
+* To add the models into the application, after completing the detail, I would make migrations by running 
 `python manage.py makemigrations`. Once this was successfully done, I would run `python manage.py migrate` to 
 actually move the table into the database. These commands were ran from the command line.
 
-
+Postgres needs to be added as an add-on in Heroku.
 
 
 ##Technologies/Support Used
@@ -152,21 +187,43 @@ Below is a list of technologies I used to build my dashboard.
 * HTML - HTML5 provided the structure of my website. I tried to use semantic elements where possible to ensure the best structure.
 * CSS - Used to style my page.
 * [Bootstrap](https://getbootstrap.com/) - Used primarily for the grid system. I find this a really good way to position my elements where I want them.
-* [PyCharm]() - This is my text editor. It has a built in terminal so I could do everything I needed to from one environment.
+* [PyCharm](https://www.jetbrains.com/pycharm/) - This is my text editor. It has a built in terminal so I could do everything I needed to from one environment.
 * [Git](https://git-scm.com) - Git was used for version control. Allowing me to create backups whenever significant changes were made to my code.
 * [GitHub](https://github.com/) - This is where my repository is held externally. I will also use GitHub pages to deploy my website.
 * [Google Fonts](https://fonts.google.com/) - Used to import specific fonts I wanted to use on my website.
 * [Python](https://www.python.org/) - Python was the language used to build the backend of the website.
-* [Django]() - Python framework used in order to build out the routes/views of my website.
-* [PostGres]() - 
-* [typewriter.js]() - 
-* [Stripe]() - 
+* [Django](https://www.djangoproject.com/) - Python framework used in order to build out the routes/views of my website.
+* [Heroku](https://id.heroku.com/login) - I used Heroku to deploy my website.
+* [Postgres](https://www.postgresql.org/) - I used Postgres as my database for development and production.
+* [Typewriter.js](https://safi.me.uk/typewriterjs/) - I used the typewriter library for the typing feature on the home page.
+* [Lightbox.js](https://lokeshdhakar.com/projects/lightbox2/) - I used this for the lightbox on the Gallery page.
+* [Stripe](https://stripe.com/gb) - I used Stripe to process payments on the site.
+* [WhiteNoise](http://whitenoise.evans.io/en/stable/django.html) - I used WhiteNoise to serve my static files.
 
 
 ##Testing
 ---
-###Development
+All of my testing was done manually for this project. I did however use automatic validators to check my code. They 
+are detailed in the credits section at the bottom of the page. I used PEP8 for my Python code, and the W3C validator 
+for my HTML and CSS code. I used all of these periodically throughout development to ensure I was always adhering to 
+standards. Due to my usage of the Jinja templating system. I had to manually go through the errors and look which ones 
+were valid as it doesn't recognise Jinja syntax.
 
+My choice of browser for this project was firefox developer edition. This is my go to browser due to the really good dev tools.
+The dev tools play a huge part in how I developed my website. When working on bug fixes or new styles I always use the dev tools 
+first to see what they look like or if I can find whats causing the bug before implementing into my own code. The dev tools 
+also play a major part in me using the mobile-first approach to designing and developing my website.
+
+Although I primarily used firefox for development, i periodically checked how my site look in other modern browsers. 
+Firefox, Chrome, Safari, Opera and Edge were all used to ensure all functionality was working across them all. In 
+addition to testing on various browsers, I also ensure the site was responsive by testing on various mobile devices. 
+Primarily, on iPhone and iPad.
+
+Additionally, after realising the dev tools aren't always 100% accurate with certain things (see footer bug below), I 
+got the help of my peer [Anthony](https://github.com/auxfuse/) to help test my site on non iOS mobile devices.
+
+Further down the line, I also sent out the link to the deployed site to family and friends to get their feedback on design 
+and responsiveness to ensure I had covered all my bases with regards to different devices.
 
 ##Notable Bugs and fixes
 ---
@@ -195,40 +252,37 @@ number input fields from the forms module are able to accept min and max lengths
 
 ##Deployment
 ---
-My website was created using VSCode. VSCode is a text editor with a built in terminal. I chose to use a text editor/IDE 
-outside of AWS Cloud9 to gain experience working outside of a browser. Once I had created my file structure and first 
-HTML page, i initiated a local repository using GIT which was downloaded onto my machine previously. I then created an 
+My website was created using PyCharm. PyCharm is an IDE with a built in terminal, however I chose to use
+iTerm2 for my terminal. I chose to use a text editor/IDE 
+outside of AWS Cloud9 to gain experience working outside of a browser. Once I had created my new Django project,
+ I initiated a local repository using GIT which was downloaded onto my machine previously. I then created an 
 external repository in GitHub and linked the local and external repositories. This allowed me to version control 
 throughout the lifespan of the development.
 
-* I created a new environment in VS Code
+* I created a new project in PyCharm.
 * Created a new virtual environment.
-* In the bash terminal, entered 'git init'
-* Created all my folders and files.
-* Entered 'git add .' into the bash terminal
-* Entered 'git commit' into the bash terminal and created my initial commit
+* I then created a local git repo.
 * I then linked my local git repository to a GitHub repository.
 * I then followed the below steps to deploy the site to Heroku.
 
 To deploy the website to Heroku, I followed the below steps:
-* Created an Heroku Account.
 * Created a new project.
 * From the deployment method section of the Deploy tab, I selected GitHub, and then entered my github repo link in the 
 field provided.
-* Every time I push to GitHub it will automatically send the updates across to Heroku.
+* Every time I push to GitHub master branch it will automatically send the updates across to Heroku.
 * I then also had to create some Config Vars in the settings tab, to reflect the environment variables created 
-in the .flaskenv file that is in .gitignore.
+in the env.py file. This file was added to a .gitignore file to ensure the security of sensitive information.
 * [Website Link](https://jamieboydphotography.herokuapp.com/)
 
 ###To run this project locally
 
-* Follow this link to the [GitHub Repository](https://github.com/jboyd8/milestone-project-3)
+* Follow this link to the [GitHub Repository](https://github.com/jboyd8/jamieboydphotography)
 * Click on the 'Clone or Download' button.
 * Copy the URL provided.
 * Open a bash terminal, move to your desired directory.
 * Type 'git clone' and paste in the URL.
-* Create a .flaskenv file and store three environment variables. (API_KEY, MONGO_URI and SECRET_KEY)
-* In order to complete this you will need a MongoDB Atlas account and an account with API Football.
+* Create an env.py file and store three environment variables. The environment variables required are (SECRET_KEY, DATABASE_URL, 
+STRIPE_PUBLISHABLE, STRIPE_SECRET). In addition to these you will need to setup email variables here too.
 
 
 ##Credits
@@ -238,5 +292,6 @@ in the .flaskenv file that is in .gitignore.
 * [HTML Color Code](https://htmlcolorcodes.com/) - Used this website in order to obtain hex codes whilst styling my pages.
 * [W3C Validator](https://validator.w3.org/#validate_by_input) - A validator used to check my HTML and CSS structure and format periodically throughout the build.
 * [CSS Autoprefixer](https://autoprefixer.github.io/) - Used to prefix CSS for browser support.
+* [PEP8](http://pep8online.com/) - Python validator to ensure my code adhered to PEP8 standards.
 * Concepts iOS app - Used to build wireframes.
 
