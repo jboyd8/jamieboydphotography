@@ -429,6 +429,13 @@ section {
     text-align: center;
 }
 
+/* 500 and 404 */
+
+.error-rows {
+    text-align: center;
+    padding: 2em;
+}
+
 /* Footer */
 #main-footer {
     height: 5%;
