@@ -154,10 +154,6 @@ section {
     border-radius: 50%;
 }
 
-@media (min-width: ) {
-    
-}
-
 /* Login */
 
 .login-body {
@@ -457,7 +453,6 @@ section {
 }
 
 .socials {
-    display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
     text-align: center;
