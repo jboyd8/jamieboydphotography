@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Product(models.Model):
+    """
+    Create model for single instance of a product.
+    """
     name = models.CharField(max_length=200, default='Print')
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
