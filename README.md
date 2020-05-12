@@ -12,7 +12,7 @@ Javascript, HTML and CSS skills we have previously learnt.
 
 [Jamie Boyd Photography](https://jamieboydphotography.herokuapp.com/)
 
-##Development
+## Development
 ---
 To develop this project i decided to use Django 3. Although the course was taught using Django 1 I wanted to try and get 
 myself familiar with the newest tech, especially given it is only a couple of months old (at the time of writing). This 
@@ -33,7 +33,7 @@ Additionally, I chose to use Postgres as my database as this is more scalable as
 The app is deployed on Heroku, and all environment variables are stored locally in an env.py file. This was added to 
 a .gitignore file so all of the values were kept a secret.
 
-###Note
+### Note
 When testing this project, to make a payment via the store, the below details should be used:
 * Card Number: 4242424242424242
 * CVC: Any 3 digit number
@@ -45,7 +45,7 @@ Anything not matching the above will receive an error.
 ## UX/UI
 ---
 ### User Stories
-####Site Users
+#### Site Users
 * I want the ability to browse the website on any device.
 * I want to be able to register an account on the website in order to gain further access.
 * I want to be able to view the photographers images.
@@ -56,7 +56,7 @@ Anything not matching the above will receive an error.
 * I want to be able to contact the business owner if the need every arises.
 * I want to be able to logout of my account.
 
-###Site Owner
+### Site Owner
 * I want the ability to add blog posts from the admin site and publish when complete.
 * I want the ability to remove any comments from blog posts if they include profanity.
 * I want the ability to revoke a users access should the repeatedly do the above.
@@ -66,7 +66,7 @@ Anything not matching the above will receive an error.
 * I want to be able to be contacted by a user should they deem in necessary.
 * I want to be able to see a record of orders in the admin site.
 
-###Design
+### Design
 I chose to go with a minimalistic design for this website. Minimalistic website are by far 
 my favourite to look at. I really enjoy a super simple design to look at and this was the inspiration 
 here. Another big favourite of mine is dark mode. I love to look at websites that are majority dark and 
@@ -103,7 +103,7 @@ feature in the css styles, and just used bootstrap cards to created a layout. Ho
  before they start looking gimmicky. 
 
 
-###Wireframes
+### Wireframes
 
 ###Index
 ![Index](jamieboydphoto/static/wireframes/Index.jpg)
@@ -123,9 +123,9 @@ feature in the css styles, and just used bootstrap cards to created a layout. Ho
 ![Cart](jamieboydphoto/static/wireframes/Cart.jpg)
 
 
-##Features
+## Features
 ---
-####Current Features
+#### Current Features
 * Gallery - A page where I have picked a selection of my favourite images for users to browse.
 * Store - Created somewhere to sell my best images. This is a small selection of my images which 
 I consider to be my best.
@@ -136,12 +136,12 @@ store and add, edit and delete comments on blog posts.
 * Contact Us - Give the user an opportunity to send a message to the business owner.
 
 
-####Future Features
+#### Future Features
 * Forum - I may look to add a forum feature further down the line. This would allow users to start up conversations 
 themselves and create somewhat of a community.
 * A previous orders page, so a user can keep track of their orders.
 
-####Defensive Design
+#### Defensive Design
 Throughout the build of this site various defensive features were added to protect against malicious activity, and 
 also to stop things breaking.
 
@@ -163,12 +163,12 @@ to be entered. So combat this I added a min and max length of 16 to the form.
 * 404 and 500 error pages were created so that the user received a custom error rather than receiving the 
 django standards.
 
-##Database
+## Database
 I chose to take a different route to the majority of my peers with regards to the database. 
 I decided to use Postgres for this project but rather than having one database for production 
 and one for development, I decided to implement Postgres from the start. Because of the nature of my website 
 I didn't feel there was any real need to use different databases as the content would be the same. 
-###Models
+### Models
 I spent a lot of time preparing the models for this before creating the because I wanted to get them right 
 the the first time. They were carefully thought out to ensure everything I could need was captured. I also wanted to 
 take accessibility into consideration on my site, so I added an image description on the gallery and the store 
@@ -181,7 +181,7 @@ actually move the table into the database. These commands were ran from the comm
 Postgres needs to be added as an add-on in Heroku.
 
 
-##Technologies/Support Used
+## Technologies/Support Used
 ---
 Below is a list of technologies I used to build my dashboard.
 * HTML - HTML5 provided the structure of my website. I tried to use semantic elements where possible to ensure the best structure.
@@ -201,7 +201,7 @@ Below is a list of technologies I used to build my dashboard.
 * [WhiteNoise](http://whitenoise.evans.io/en/stable/django.html) - I used WhiteNoise to serve my static files.
 
 
-##Testing
+## Testing
 ---
 All of my testing was done manually for this project. I did however use automatic validators to check my code. They 
 are detailed in the credits section at the bottom of the page. I used PEP8 for my Python code, and the W3C validator 
@@ -225,7 +225,7 @@ got the help of my peer [Anthony](https://github.com/auxfuse/) to help test my s
 Further down the line, I also sent out the link to the deployed site to family and friends to get their feedback on design 
 and responsiveness to ensure I had covered all my bases with regards to different devices.
 
-##Notable Bugs and fixes
+## Notable Bugs and fixes
 ---
 * The website doesn't work at all on IE. I was unable to find a fix for this so concentrated on making sure everything was 
 working on modern browsers.
@@ -250,7 +250,7 @@ to add min and max lengths to the forms in various ways to no avail. I came acro
 which detailed how it could be done using JS. I implemented the JS and adjusted it slightly to my use case. I believe 
 number input fields from the forms module are able to accept min and max lengths in the form itself.
 
-##Deployment
+## Deployment
 ---
 My website was created using PyCharm. PyCharm is an IDE with a built in terminal, however I chose to use
 iTerm2 for my terminal. I chose to use a text editor/IDE 
@@ -274,7 +274,7 @@ field provided.
 in the env.py file. This file was added to a .gitignore file to ensure the security of sensitive information.
 * [Website Link](https://jamieboydphotography.herokuapp.com/)
 
-###To run this project locally
+### To run this project locally
 
 * Follow this link to the [GitHub Repository](https://github.com/jboyd8/jamieboydphotography)
 * Click on the 'Clone or Download' button.
@@ -285,7 +285,7 @@ in the env.py file. This file was added to a .gitignore file to ensure the secur
 STRIPE_PUBLISHABLE, STRIPE_SECRET). In addition to these you will need to setup email variables here too.
 
 
-##Credits
+## Credits
 ---
 * To my mentor, [Reuben Ferrante](https://github.com/arex18), for guiding me through the process and offering assistance when necessary to point me in the right direction.
 * The Slack community. The help a student is able to receive from the other students is a really great tool to have.
