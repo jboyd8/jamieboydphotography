@@ -3,7 +3,9 @@ from .models import Product
 
 
 def store(request):
-
+    """
+    Render all published items from the store model.
+    """
     products = Product.objects.filter(is_published=True)
 
     context = {
