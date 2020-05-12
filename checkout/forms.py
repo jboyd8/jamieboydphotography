@@ -3,6 +3,9 @@ from .models import Order
 
 
 class MakePaymentForm(forms.Form):
+    """
+    Create form for payments via stripe
+    """
 
     MONTH_CHOICES = [(i, i) for i in range(1, 13)]
     YEAR_CHOICES = [(i, i) for i in range(2020, 2036)]
@@ -52,6 +55,9 @@ class MakePaymentForm(forms.Form):
 
 
 class OrderForm(forms.ModelForm):
+    """
+    Create an order form that will also render at the checkout page
+    """
     class Meta:
         model = Order
         fields = ('full_name', 'phone_number', 'country', 'postcode', 'town_or_city', 'street_address1',
