@@ -201,6 +201,7 @@ Below is a list of technologies I used to build my dashboard.
 * [Python](https://www.python.org/) - Python was the language used to build the backend of the website.
 * [Django](https://www.djangoproject.com/) - Python framework used in order to build out the routes/views of my website.
 * [Heroku](https://id.heroku.com/login) - I used Heroku to deploy my website.
+* [Travis](https://travis-ci.org/) - I used Travis to ensure throughout development that my project was building successfully.
 * [Postgres](https://www.postgresql.org/) - I used Postgres as my database for development and production.
 * [Typewriter.js](https://safi.me.uk/typewriterjs/) - I used the typewriter library for the typing feature on the home page.
 * [Lightbox.js](https://lokeshdhakar.com/projects/lightbox2/) - I used this for the lightbox on the Gallery page.
@@ -215,6 +216,10 @@ are detailed in the credits section at the bottom of the page. I used PEP8 for m
 for my HTML and CSS code. I used all of these periodically throughout development to ensure I was always adhering to 
 standards. Due to my usage of the Jinja templating system. I had to manually go through the errors and look which ones 
 were valid as it doesn't recognise Jinja syntax.
+
+I used Travis throughout production to ensure that every time i made a change to the deployed site it built correctly.
+I added a snippet of code to a travis.yml file and then added some markdown to my README so that I could always see the 
+status i case anything went wrong.
 
 My choice of browser for this project was firefox developer edition. This is my go to browser due to the really good dev tools.
 The dev tools play a huge part in how I developed my website. When working on bug fixes or new styles I always use the dev tools 
