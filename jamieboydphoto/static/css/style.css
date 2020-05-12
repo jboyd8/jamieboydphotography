@@ -294,6 +294,7 @@ section {
     border: #d7d9d7 solid 1px;
 }
 
+.add-cmt-form,
 .no-com-col {
     text-align: center;
 }
@@ -302,12 +303,13 @@ section {
     border: none;
 }
 
-.add-cmt-form {
-    text-align: center;
-}
-
 .del-com-btn {
     margin-top: 1em;
+}
+
+.not-loggedin-cmt-card {
+    text-align: center;
+    background-color: #121212;
 }
 
 /* Contact */
