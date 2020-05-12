@@ -13,6 +13,11 @@ stripe.api_key = settings.STRIPE_SECRET
 
 @login_required()
 def checkout(request):
+    """
+    If method is GET, should display empty forms. If POST, should pick up the details from both the order form and
+    the payment form. Additionally should pick up the cart items. Added error handling to catch exceptions when the
+    payment id processed. Flash relevant messages one the payment is either processed or rejected.
+    """
     if request.method == 'POST':
         order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
@@ -44,6 +49,9 @@ def checkout(request):
                 )
             except stripe.error.CardError:
                 messages.error(request, "Your card was declined")
+
+            except Exception as e:
+                messages.error(request, "Your card was declined, you weren't charged.")
 
             if customer.paid:
                 messages.success(request, 'You have successfully paid')
