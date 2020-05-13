@@ -181,10 +181,12 @@ section {
     margin: 2em 0;
     text-align: center;
     border: 2px solid #d7d9d7;
+    height: 80%;
 }
 
 .blogs-title {
     font-weight: bold;
+    height: 50%;
 }
 
 .blogs-card-body {
