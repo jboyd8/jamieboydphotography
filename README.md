@@ -352,6 +352,8 @@ in the env.py file. This file was added to a .gitignore file to ensure the secur
 * Type 'git clone' and paste in the URL.
 * Create an env.py file and store three environment variables. The environment variables required are (SECRET_KEY, DATABASE_URL, 
 STRIPE_PUBLISHABLE, STRIPE_SECRET). In addition to these you will need to setup email variables here too.
+* You should also install all the dependencies from the requirements.txt file to ensure all functionality is there. To 
+install you can use the command `pip3 install -r requirements.txt` in the command line.
 
 
 ## Credits
