@@ -31,7 +31,7 @@
                             <form class="form-group" method="POST" action="{% url 'add_to_cart' product.id %}">
                                 {% csrf_token %}
                                 <input type="number" name="quantity" min="1" max="5"
-                                       class="form-control store-form-item" placeholder="Quantity">
+                                       class="form-control store-form-item" placeholder="Quantity" required>
                                 <button class="btn btn-form-control store-form-item atc-btn"
                                         type="submit">Add To Cart</button>
                             </form>
