@@ -381,6 +381,10 @@ section {
     text-align: center;
 }
 
+#credit-card-errors {
+    color: #cc1111;
+}
+
 /* 500 and 404 */
 
 .error-rows {
