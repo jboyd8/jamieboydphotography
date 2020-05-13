@@ -285,6 +285,11 @@ section {
     margin-top: 1em;
 }
 
+.modal-content {
+    background-color: #d7d9d7;
+    color: #121212;
+}
+
 .not-loggedin-cmt-card {
     text-align: center;
     background-color: #121212;
@@ -304,8 +309,6 @@ section {
     padding-top: 15%;
 }
 
-
-
 .image-cols {
     padding: 1.5em;
 }
@@ -315,11 +318,11 @@ section {
 }
 
 /* Store */
+
 .store-intro {
     padding: 20% 10% 5%;
     text-align: center;
 }
-
 
 .store-cards {
     background-color: #121212;
