@@ -190,8 +190,8 @@ Postgres needs to be added as an add-on in Heroku.
 ### Database Schema
 <details>
 <summary>
-![schema](jamieboydphoto/static/img/database-schema.png)
 </summary>
+<img src="jamieboydphoto/static/img/database-schema.png" alt="">
 </details>
 
 
