@@ -187,6 +187,14 @@ actually move the table into the database. These commands were ran from the comm
 
 Postgres needs to be added as an add-on in Heroku.
 
+### Database Schema
+<details>
+<summary>
+![schema](jamieboydphoto/static/img/database-schema.png)
+</summary>
+</details>
+
+
 
 ## Technologies/Support Used
 ---
