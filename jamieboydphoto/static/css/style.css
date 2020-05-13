@@ -115,11 +115,7 @@ section {
     font-size: 3em;
 }
 
-@media (min-width: 992px) {
-    #typewriter-app {
-        font-size: 5em;
-    }
-}
+
 
 /* About */
 
@@ -139,13 +135,7 @@ section {
     padding-top: 15%;
 }
 
-@media (min-width: 992px) {
-    .about-row {
-        padding-left: 20%;
-        padding-right: 20%;
-        padding-top: 5%;
-    }
-}
+
 
 .about-image {
     padding-bottom: 10%;
@@ -161,11 +151,7 @@ section {
     margin-top: 20%;
 }
 
-@media (min-width: 992px) {
-    .login-body {
-        margin-top: 10%;
-    }
-}
+
 
 .user-card-header {
     background-color: #121212;
@@ -197,25 +183,13 @@ section {
     padding-bottom: 0;
 }
 
-/* Media query to reduce the padding on bigger screens */
-
-@media (min-width: 576px) {
-    .blogs-row {
-        padding: 2% 2%;
-    }
-}
-
 .blogs-card {
     margin: 2em 0;
     text-align: center;
     border: 2px solid #d7d9d7;
 }
 
-@media (min-width: 992px) {
-    .blogs-title {
-        font-size: 1.5em;
-    }
-}
+
 
 .blogs-title {
     font-weight: bold;
@@ -330,11 +304,7 @@ section {
     padding-top: 15%;
 }
 
-@media (min-width: 992px) {
-    .gallery-text {
-        padding-top: 5%;
-    }
-}
+
 
 .image-cols {
     padding: 1.5em;
@@ -344,24 +314,12 @@ section {
     border: none;
 }
 
-/* Added media query to bring structure to page on bigger screens */
-@media (min-width: 992px) {
-    .gallery-images {
-        height: 25vh;
-    }
-}
-
 /* Store */
 .store-intro {
     padding: 20% 10% 5%;
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    .store-intro {
-        padding-top: 5%;
-    }
-}
 
 .store-cards {
     background-color: #121212;
@@ -372,12 +330,6 @@ section {
 
 .store-form-item {
     margin: 0.5em 0;
-}
-
-@media (min-width: 768px) {
-    .store-img {
-        height: 25vh;
-    }
 }
 
 .store-price {
@@ -424,12 +376,6 @@ section {
     padding-right: 7.5%;
 }
 
-@media (min-width: 768px) {
-    .checkout-col {
-        padding-right: 20%;
-        padding-left: 20%;
-    }
-}
 
 .checkout-card {
     text-align: center;
@@ -465,3 +411,57 @@ section {
 .dev-icon a {
     padding-left: 1em;
 }
+
+/* Media Queries */
+
+@media (min-width: 576px) {
+    .blogs-row {
+        padding: 2% 2%;
+    }
+}
+
+@media (min-width: 768px) {
+    .store-intro {
+        padding-top: 5%;
+    }
+
+    .store-img {
+        height: 25vh;
+    }
+
+    .checkout-col {
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+}
+
+@media (min-width: 992px) {
+    #typewriter-app {
+        font-size: 5em;
+    }
+
+    .about-row {
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 5%;
+    }
+
+    .login-body {
+        margin-top: 10%;
+    }
+
+    .blogs-title {
+        font-size: 1.5em;
+    }
+
+    .gallery-text {
+        padding-top: 5%;
+    }
+
+    .gallery-images {
+        height: 25vh;
+    }
+}
+
+
+
