@@ -105,30 +105,77 @@ feature in the css styles, and just used bootstrap cards to created a layout. Ho
 
 ### Wireframes
 
-### Index
-![Index](jamieboydphoto/static/wireframes/Index.jpg)
+<details>
+<summary>
+Index
+</summary>
+<p>
+<img src="jamieboydphoto/static/wireframes/Index.jpg" alt="">
+</p>
+</details>
 
-### About
-![About](jamieboydphoto/static/wireframes/About.jpg)
+<details>
+<summary>
+About
+</summary>
+<p>
+<img src="jamieboydphoto/static/wireframes/About.jpg" alt="">
+</p>
+</details>
 
-### Gallery
-![Gallery](jamieboydphoto/static/wireframes/Gallery.jpg)
+<details>
+<summary>
+Gallery
+</summary>
+<p>
+<img src="jamieboydphoto/static/wireframes/Gallery.jpg" alt="">
+</p>
+</details>
 
-### Blog Main Page
-![BlogMain](jamieboydphoto/static/wireframes/Blog%20main.jpg)
+<details>
+<summary>
+Blog Main page
+</summary>
+<p>
+<img src="jamieboydphoto/static/wireframes/Blog%20main.jpg" alt="">
+</p>
+</details>
 
-### Individual Blog Pages
-![BlogIndividuals](jamieboydphoto/static/wireframes/Blog%20individual.jpg)
+<details>
+<summary>
+Individual Blog Pages
+</summary>
+<p>
+<img src="jamieboydphoto/static/wireframes/Blog%20individual.jpg" alt="">
+</p>
+</details>
 
-### Forms
-![Forms](jamieboydphoto/static/wireframes/Forms.jpg)
+<details>
+<summary>
+Forms
+</summary>
+<p>
+<img src="jamieboydphoto/static/wireframes/Forms.jpg" alt="">
+</p>
+</details>
 
-### Store
-![Store](jamieboydphoto/static/wireframes/Store.jpg)
+<details>
+<summary>
+Store
+</summary>
+<p>
+<img src="jamieboydphoto/static/wireframes/Store.jpg" alt="">
+</p>
+</details>
 
-### Cart
-![Cart](jamieboydphoto/static/wireframes/Cart.jpg)
-
+<details>
+<summary>
+Cart
+</summary>
+<p>
+<img src="jamieboydphoto/static/wireframes/Cart.jpg" alt="">
+</p>
+</details>
 
 ## Features
 ---
@@ -189,7 +236,7 @@ Postgres needs to be added as an add-on in Heroku.
 
 <details>
 <summary>
-Database Schema Image below;
+Database Schema Image below
 </summary>
 <p>
 <img src="jamieboydphoto/static/img/database-schema.png" alt="">
@@ -200,12 +247,7 @@ Database Schema Image below;
 
 ## Technologies/Support Used
 ---
-
-<details>
-<summary>
 Below is a list of technologies I used to build my dashboard.
-</summary>
-<p>
 * HTML - HTML5 provided the structure of my website. I tried to use semantic elements where possible to ensure the best structure.
 * CSS - Used to style my page.
 * [Bootstrap](https://getbootstrap.com/) - Used primarily for the grid system. I find this a really good way to position my elements where I want them.
@@ -222,11 +264,6 @@ Below is a list of technologies I used to build my dashboard.
 * [Lightbox.js](https://lokeshdhakar.com/projects/lightbox2/) - I used this for the lightbox on the Gallery page.
 * [Stripe](https://stripe.com/gb) - I used Stripe to process payments on the site.
 * [WhiteNoise](http://whitenoise.evans.io/en/stable/django.html) - I used WhiteNoise to serve my static files.
-</p>
-</details>
-
-
-
 
 
 ## Testing
