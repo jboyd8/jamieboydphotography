@@ -189,19 +189,23 @@ Postgres needs to be added as an add-on in Heroku.
 
 <details>
 <summary>
-Database Schema
+Database Schema Image below;
 </summary>
 <p>
 <img src="jamieboydphoto/static/img/database-schema.png" alt="">
 </p>
-
 </details>
 
 
 
 ## Technologies/Support Used
 ---
+
+<details>
+<summary>
 Below is a list of technologies I used to build my dashboard.
+</summary>
+<p>
 * HTML - HTML5 provided the structure of my website. I tried to use semantic elements where possible to ensure the best structure.
 * CSS - Used to style my page.
 * [Bootstrap](https://getbootstrap.com/) - Used primarily for the grid system. I find this a really good way to position my elements where I want them.
@@ -218,6 +222,11 @@ Below is a list of technologies I used to build my dashboard.
 * [Lightbox.js](https://lokeshdhakar.com/projects/lightbox2/) - I used this for the lightbox on the Gallery page.
 * [Stripe](https://stripe.com/gb) - I used Stripe to process payments on the site.
 * [WhiteNoise](http://whitenoise.evans.io/en/stable/django.html) - I used WhiteNoise to serve my static files.
+</p>
+</details>
+
+
+
 
 
 ## Testing
