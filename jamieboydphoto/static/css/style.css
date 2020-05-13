@@ -115,8 +115,6 @@ section {
     font-size: 3em;
 }
 
-
-
 /* About */
 
 .about-body {
@@ -135,8 +133,6 @@ section {
     padding-top: 15%;
 }
 
-
-
 .about-image {
     padding-bottom: 10%;
 }
@@ -150,8 +146,6 @@ section {
 .login-body {
     margin-top: 20%;
 }
-
-
 
 .user-card-header {
     background-color: #121212;
@@ -187,14 +181,10 @@ section {
     margin: 2em 0;
     text-align: center;
     border: 2px solid #d7d9d7;
-    height: 20vh;
 }
-
-
 
 .blogs-title {
     font-weight: bold;
-    height: 50vh;
 }
 
 .blogs-card-body {
